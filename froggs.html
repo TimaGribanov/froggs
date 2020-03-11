@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>froggs</title>
+    <!-- base href="http://localhost:63342/timagribanov.github.io/"/ -->
+    <base href="https://timagribanov.github.io/"/>
+
+    <script>
+        function start() {
+            var modal = document.getElementById('attention');
+
+            modal.style.display = 'block';
+
+            var close = document.getElementById('attentionImg');
+            close.onclick = function() {
+                modal.style.display = 'none';
+                frogs();
+            };
+        }
+
+        function frogs() {
+            var pictures = [
+                'froggs/img/1.jpg',
+                'froggs/img/2.jpg',
+                'froggs/img/3.jpg',
+                'froggs/img/4.jpg',
+                'froggs/img/5.jpg',
+                'froggs/img/6.jpg',
+                'froggs/img/7.jpg',
+                'froggs/img/8.jpg',
+                'froggs/img/9.jpg',
+                'froggs/img/10.jpg',
+                'froggs/img/11.jpg',
+                'froggs/img/12.jpg',
+                'froggs/img/13.jpg',
+                'froggs/img/14.jpg',
+                'froggs/img/15.jpg',
+                'froggs/img/16.jpg',
+                'froggs/img/17.jpg',
+                'froggs/img/18.jpg',
+                'froggs/img/19.jpg',
+                'froggs/img/20.jpg',
+                'froggs/img/21.jpg',
+                'froggs/img/22.jpg',
+                'froggs/img/23.jpg',
+                'froggs/img/24.jpg',
+                'froggs/img/25.jpg',
+                'froggs/img/26.jpg',
+                'froggs/img/27.jpg',
+                'froggs/img/28.jpg',
+                'froggs/img/29.jpg',
+                'froggs/img/30.jpg',
+                'froggs/img/31.jpg',
+                'froggs/img/32.jpg',
+                'froggs/img/33.jpg',
+                'froggs/img/34.jpg',
+                'froggs/img/35.jpg',
+                'froggs/img/36.jpg',
+                'froggs/img/37.jpg',
+                'froggs/img/38.jpg',
+                'froggs/img/39.jpg',
+                'froggs/img/40.jpg',
+                'froggs/img/41.jpg',
+                'froggs/img/42.jpg',
+                'froggs/img/43.jpg',
+                'froggs/img/44.jpg',
+                'froggs/img/45.jpg',
+                'froggs/img/46.jpg',
+                'froggs/img/47.jpg',
+                'froggs/img/48.jpg',
+                'froggs/img/49.jpg',
+                'froggs/img/50.jpg',
+                'froggs/img/51.jpg',
+                'froggs/img/52.jpg',
+                'froggs/img/53.jpg',
+                'froggs/img/54.jpg',
+                'froggs/img/55.jpg',
+                'froggs/img/56.jpg',
+                'froggs/img/57.jpg',
+                'froggs/img/58.jpg',
+                'froggs/img/59.jpg',
+                'froggs/img/60.jpg',
+                'froggs/img/61.jpg',
+                'froggs/img/62.jpg',
+                'froggs/img/63.jpg',
+                'froggs/img/64.jpg',
+                'froggs/img/65.jpg',
+                'froggs/img/66.jpg',
+                'froggs/img/67.jpg',
+                'froggs/img/68.jpg',
+                'froggs/img/69.jpg',
+                'froggs/img/70.jpg',
+                'froggs/img/71.jpg',
+                'froggs/img/72.jpg',
+                'froggs/img/73.jpg',
+                'froggs/img/74.jpg',
+                'froggs/img/75.jpg',
+                'froggs/img/76.jpg',
+                'froggs/img/77.jpg',
+                'froggs/img/78.jpg',
+                'froggs/img/79.jpg',
+                'froggs/img/80.jpg',
+                'froggs/img/81.jpg',
+                'froggs/img/82.jpg',
+                'froggs/img/83.jpg',
+                'froggs/img/84.jpg',
+                'froggs/img/85.jpg',
+                'froggs/img/86.jpg',
+                'froggs/img/87.jpg',
+                'froggs/img/88.jpg',
+                'froggs/img/89.jpg',
+                'froggs/img/90.jpg',
+                'froggs/img/91.jpg',
+                'froggs/img/92.jpg',
+                'froggs/img/93.jpg',
+                'froggs/img/94.jpg',
+                'froggs/img/95.jpg',
+                'froggs/img/96.jpg',
+                'froggs/img/97.jpg',
+                'froggs/img/98.jpg',
+                'froggs/img/99.jpg',
+                'froggs/img/100.jpg',
+                'froggs/img/101.jpg',
+                'froggs/img/102.jpg',
+                'froggs/img/103.jpg',
+                'froggs/img/104.jpg',
+                'froggs/img/105.jpg',
+                'froggs/img/106.jpg',
+                'froggs/img/107.jpg',
+                'froggs/img/108.jpg',
+                'froggs/img/109.jpg',
+                'froggs/img/110.jpg',
+                'froggs/img/111.jpg',
+                'froggs/img/112.jpg',
+                'froggs/img/113.jpg',
+                'froggs/img/114.jpg',
+                'froggs/img/115.jpg',
+                'froggs/img/116.jpg',
+                'froggs/img/117.jpg',
+                'froggs/img/118.jpg',
+                'froggs/img/119.jpg',
+                'froggs/img/120.jpg',
+                'froggs/img/121.jpg',
+                'froggs/img/122.jpg',
+                'froggs/img/123.jpg',
+                'froggs/img/124.jpg'
+            ];
+            var frog = document.getElementById('pic');
+            frog.src = pictures[Math.floor(Math.random() * pictures.length)];
+        }
+    </script>
+
+    <style>
+        #mainFrogg {
+            text-align: center;
+            height: 95vh;
+        }
+
+        #button {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+
+        #button:active {
+            width: 50px;
+            height: 50px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        #pic {
+            max-height: 60%;
+        }
+
+        #attention {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            text-align: center;
+            padding-top: 50px;
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        #attentionImg {
+            width: 625px;
+            height: 832px;
+            cursor: pointer;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)}
+            to {transform:scale(1)}
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="start()">
+    <div id="attention">
+        <img id="attentionImg" src="froggs/img/frogg_attention.jpg" alt="Знай, всяк сюда входящий, что далее идут жабы"/><br/>
+    </div>
+
+    <div id="mainFrogg">
+        <img id="button" src="froggs/img/frogg_button.png" onclick="frogs()" alt="Смени жабу"/><br/>
+        <!-- <button onclick="frogs()">Смени жабу</button><br/> -->
+        <img id="pic" src='' alt="Тут жаба"/>
+    </div>
+
+    <footer>
+        <a href="froggs/gallery.html">Каталог жаб</a>
+        <a href="froggs/follower.html">Погоняй жабу</a>
+        <a href="froggs/catcher.html">Поймай жабу</a>
+    </footer>
+</body>
+</html>

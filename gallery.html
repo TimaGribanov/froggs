@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Каталог жаб</title>
+    <!-- base href="http://localhost:63342/timagribanov.github.io/"/ -->
+    <base href="https://timagribanov.github.io/"/>
+
+    <script>
+        function frogs() {
+            var pictures = [
+                'froggs/img/1.jpg',
+                'froggs/img/2.jpg',
+                'froggs/img/3.jpg',
+                'froggs/img/4.jpg',
+                'froggs/img/5.jpg',
+                'froggs/img/6.jpg',
+                'froggs/img/7.jpg',
+                'froggs/img/8.jpg',
+                'froggs/img/9.jpg',
+                'froggs/img/10.jpg',
+                'froggs/img/11.jpg',
+                'froggs/img/12.jpg',
+                'froggs/img/13.jpg',
+                'froggs/img/14.jpg',
+                'froggs/img/15.jpg',
+                'froggs/img/16.jpg',
+                'froggs/img/17.jpg',
+                'froggs/img/18.jpg',
+                'froggs/img/19.jpg',
+                'froggs/img/20.jpg',
+                'froggs/img/21.jpg',
+                'froggs/img/22.jpg',
+                'froggs/img/23.jpg',
+                'froggs/img/24.jpg',
+                'froggs/img/25.jpg',
+                'froggs/img/26.jpg',
+                'froggs/img/27.jpg',
+                'froggs/img/28.jpg',
+                'froggs/img/29.jpg',
+                'froggs/img/30.jpg',
+                'froggs/img/31.jpg',
+                'froggs/img/32.jpg',
+                'froggs/img/33.jpg',
+                'froggs/img/34.jpg',
+                'froggs/img/35.jpg',
+                'froggs/img/36.jpg',
+                'froggs/img/37.jpg',
+                'froggs/img/38.jpg',
+                'froggs/img/39.jpg',
+                'froggs/img/40.jpg',
+                'froggs/img/41.jpg',
+                'froggs/img/42.jpg',
+                'froggs/img/43.jpg',
+                'froggs/img/44.jpg',
+                'froggs/img/45.jpg',
+                'froggs/img/46.jpg',
+                'froggs/img/47.jpg',
+                'froggs/img/48.jpg',
+                'froggs/img/49.jpg',
+                'froggs/img/50.jpg',
+                'froggs/img/51.jpg',
+                'froggs/img/52.jpg',
+                'froggs/img/53.jpg',
+                'froggs/img/54.jpg',
+                'froggs/img/55.jpg',
+                'froggs/img/56.jpg',
+                'froggs/img/57.jpg',
+                'froggs/img/58.jpg',
+                'froggs/img/59.jpg',
+                'froggs/img/60.jpg',
+                'froggs/img/61.jpg',
+                'froggs/img/62.jpg',
+                'froggs/img/63.jpg',
+                'froggs/img/64.jpg',
+                'froggs/img/65.jpg',
+                'froggs/img/66.jpg',
+                'froggs/img/67.jpg',
+                'froggs/img/68.jpg',
+                'froggs/img/69.jpg',
+                'froggs/img/70.jpg',
+                'froggs/img/71.jpg',
+                'froggs/img/72.jpg',
+                'froggs/img/73.jpg',
+                'froggs/img/74.jpg',
+                'froggs/img/75.jpg',
+                'froggs/img/76.jpg',
+                'froggs/img/77.jpg',
+                'froggs/img/78.jpg',
+                'froggs/img/79.jpg',
+                'froggs/img/80.jpg',
+                'froggs/img/81.jpg',
+                'froggs/img/82.jpg',
+                'froggs/img/83.jpg',
+                'froggs/img/84.jpg',
+                'froggs/img/85.jpg',
+                'froggs/img/86.jpg',
+                'froggs/img/87.jpg',
+                'froggs/img/88.jpg',
+                'froggs/img/89.jpg',
+                'froggs/img/90.jpg',
+                'froggs/img/91.jpg',
+                'froggs/img/92.jpg',
+                'froggs/img/93.jpg',
+                'froggs/img/94.jpg',
+                'froggs/img/95.jpg',
+                'froggs/img/96.jpg',
+                'froggs/img/97.jpg',
+                'froggs/img/98.jpg',
+                'froggs/img/99.jpg',
+                'froggs/img/100.jpg',
+                'froggs/img/101.jpg',
+                'froggs/img/102.jpg',
+                'froggs/img/103.jpg',
+                'froggs/img/104.jpg',
+                'froggs/img/105.jpg',
+                'froggs/img/106.jpg',
+                'froggs/img/107.jpg',
+                'froggs/img/108.jpg',
+                'froggs/img/109.jpg',
+                'froggs/img/110.jpg',
+                'froggs/img/111.jpg',
+                'froggs/img/112.jpg',
+                'froggs/img/113.jpg',
+                'froggs/img/114.jpg',
+                'froggs/img/115.jpg',
+                'froggs/img/116.jpg',
+                'froggs/img/117.jpg',
+                'froggs/img/118.jpg',
+                'froggs/img/119.jpg',
+                'froggs/img/120.jpg',
+                'froggs/img/121.jpg',
+                'froggs/img/122.jpg',
+                'froggs/img/123.jpg',
+                'froggs/img/124.jpg'
+            ];
+
+            const gallery = document.getElementById('gallery');
+            let pic;
+            for (var i = 0; i < pictures.length; i++) {
+                pic = document.createElement('IMG');
+                pic.src =  pictures[i];
+                pic.onclick = showFrog;
+                pic.style.height = '100px';
+                pic.style.marginRight = '20px';
+                pic.style.marginBottom = '20px';
+                pic.style.cursor = 'pointer';
+                gallery.appendChild(pic);
+            }
+
+            let length = pictures.length.toString();
+            let frogWord;
+            if (length[2] === '1') { frogWord = 'жаба' }
+            else if (length[2] === '2' || length[2] === '3' || length[2] === '4') { frogWord = 'жабы' }
+            else { frogWord = 'жаб' }
+            document.getElementById('frogCounter').innerHTML = `В нашем каталоге на данный момент ${i} ${frogWord}.`;
+        }
+
+        function showFrog() {
+            const modal = document.getElementById('bigPicture');
+            let picture = document.getElementById('bigFrog');
+            const close = document.getElementById('close');
+
+            picture.src = this.src;
+            modal.style.display = 'block';
+
+            close.onclick = function() {
+                modal.style.display = 'none';
+            };
+        }
+    </script>
+
+    <style>
+        #bigPicture {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            text-align: center;
+            overflow: auto;
+            padding-top: 10%;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            background-color: rgba(0,0,0,0.6);
+        }
+
+        #bigPicture p {
+            font-size: 20pt;
+            color: white;
+        }
+
+        #bigPicture img {
+            max-height: 500px;
+        }
+
+        #bigPicture span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 20px;
+            font-size: 60pt;
+            color: white;
+            cursor: pointer;
+        }
+
+        #bigPicture span:hover {
+            background-color: #aaa;
+        }
+
+        #counterContainer {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #gallery {
+            width: 100%;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="frogs()">
+    <div id="bigPicture">
+        <span id="close">x</span><br/>
+        <img id="bigFrog" src="" alt=""/>
+        <p>Вот такая вот классная жаба, не правда ли?</p>
+    </div>
+
+    <div id="gallery">
+        <div id="counterContainer"><span id="frogCounter"></span></div>
+    </div>
+
+    <footer>
+        <a href="froggs/froggs.html">Обратно к случайным жабам</a>
+        <a href="froggs/follower.html">Погоняй жабу</a>
+        <a href="froggs/catcher.html">Поймай жабу</a>
+    </footer>
+</body>
+</html>

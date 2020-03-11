@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Поймай жабу</title>
+    <!-- base href="http://localhost:63342/timagribanov.github.io/"/ -->
+    <base href="https://timagribanov.github.io/"/>
+
+    <style>
+        #container {
+            width: 900px;
+            height: 900px;
+            border: black 2px solid;
+            margin: auto;
+        }
+
+        #pic {
+            position: relative;
+            width: 100px;
+            height: 76px;
+        }
+
+        #winSplash {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            text-align: center;
+            overflow: auto;
+            padding-top: 50px;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            background-color: rgba(0,0,0,0.6);
+            animation-name: zoom;
+            animation-duration: 0.4s;
+        }
+
+        #winSplash p {
+            font-size: 30pt;
+            color: white;
+        }
+
+        #winSplash img {
+            max-width: 500px;
+        }
+
+        #winSplash a {
+            color: white;
+            text-decoration-line: none;
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0)}
+            to {transform:scale(1)}
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        function randomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var i = randomInteger(5, 15); //number of needed clicks to catch a frog
+        var j = -1; //counter of done clicks
+        let width = 100;
+        let height = 76;
+
+        function catcher() {
+            var coeff = 600 / i; //coefficient to resize the frog
+            var frog = document.getElementById('pic');
+
+            j++;
+            if (j === i) {
+                youWon();
+            }
+            else {
+                let ymax = 900 - height;
+                let xmax = 900 - width;
+                frog.style.top = (Math.floor(Math.random() * ymax) + 1) + 'px';
+                frog.style.left = (Math.floor(Math.random() * xmax) + 1) + 'px';
+                frog.style.width = width + 'px';
+                frog.style.height = height + 'px';
+            }
+            width = width + coeff;
+            height = height +coeff;
+        }
+
+        function youWon() {
+            var pictures = [
+                'froggs/img/1.jpg',
+                'froggs/img/3.jpg',
+                'froggs/img/4.jpg',
+                'froggs/img/6.jpg',
+                'froggs/img/8.jpg',
+                'froggs/img/10.jpg',
+                'froggs/img/11.jpg',
+                'froggs/img/12.jpg',
+                'froggs/img/13.jpg',
+                'froggs/img/15.jpg',
+                'froggs/img/16.jpg',
+                'froggs/img/17.jpg',
+                'froggs/img/18.jpg',
+                'froggs/img/19.jpg',
+                'froggs/img/20.jpg',
+                'froggs/img/21.jpg',
+                'froggs/img/27.jpg',
+                'froggs/img/30.jpg',
+                'froggs/img/31.jpg',
+                'froggs/img/32.jpg',
+                'froggs/img/33.jpg',
+                'froggs/img/34.jpg',
+                'froggs/img/35.jpg',
+                'froggs/img/36.jpg',
+                'froggs/img/37.jpg',
+                'froggs/img/38.jpg',
+                'froggs/img/39.jpg',
+                'froggs/img/40.jpg',
+                'froggs/img/41.jpg',
+                'froggs/img/42.jpg',
+                'froggs/img/43.jpg',
+                'froggs/img/44.jpg',
+                'froggs/img/50.jpg',
+                'froggs/img/51.jpg',
+                'froggs/img/53.jpg',
+                'froggs/img/54.jpg',
+                'froggs/img/58.jpg',
+                'froggs/img/59.jpg',
+                'froggs/img/60.jpg',
+                'froggs/img/61.jpg',
+                'froggs/img/65.jpg',
+                'froggs/img/66.jpg',
+                'froggs/img/67.jpg',
+                'froggs/img/68.jpg',
+                'froggs/img/69.jpg',
+                'froggs/img/70.jpg',
+                'froggs/img/71.jpg',
+                'froggs/img/72.jpg',
+                'froggs/img/76.jpg',
+                'froggs/img/77.jpg',
+                'froggs/img/78.jpg',
+                'froggs/img/88.jpg',
+                'froggs/img/94.jpg',
+                'froggs/img/95.jpg',
+                'froggs/img/99.jpg',
+                'froggs/img/100.jpg',
+                'froggs/img/101.jpg',
+                'froggs/img/102.jpg',
+                'froggs/img/103.jpg',
+                'froggs/img/104.jpg',
+                'froggs/img/110.jpg',
+                'froggs/img/111.jpg',
+                'froggs/img/113.jpg',
+                'froggs/img/119.jpg',
+                'froggs/img/120.jpg',
+                'froggs/img/121.jpg',
+                'froggs/img/122.jpg',
+                'froggs/img/123.jpg',
+                'froggs/img/124.jpg'
+            ];
+
+            var winFrog = document.getElementById('winPic');
+            winFrog.src = pictures[Math.floor(Math.random() * pictures.length)];
+            //var winFrogSrc = winFrog.src;
+
+            var winner = document.getElementById('winSplash');
+
+            winner.style.display = 'block';
+
+            /* document.getElementById('vk_share_button').innerHTML = VK.Share.button({
+                    url: 'http://timagribanov.github.io/froggs/catcher.html',
+                    title: 'Поймай такую же классную жабу!',
+                    image: 'http://timagribanov.github.io/' + winFrogSrc,
+                },
+                {
+                    type: 'custom',
+                    text: '<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" alt="ВКонтакте" />'
+                }); */
+        }
+    </script>
+
+    <!-- script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script -->
+</head>
+<body onload="catcher()">
+    <div id="winSplash">
+        <p>Вы поймали офигенную жабу!</p>
+        <img id="winPic" src='' alt="Тут выигрышная жаба"/><br/>
+        <!-- div id="vk_share_button"></div -->
+        <a href="froggs/catcher.html">Сыграть заново</a>
+    </div>
+
+    <div id="container">
+        <img id="pic" src="froggs/img/55.jpg" alt="Жаба скачет" onclick="catcher()"/>
+    </div>
+
+    <footer>
+        <a href="froggs/gallery.html">Каталог жаб</a>
+        <a href="froggs/follower.html">Погоняй жабу</a>
+        <a href="froggs/froggs.html">Обратно к случайным жабам</a>
+    </footer>
+</body>
+</html>
