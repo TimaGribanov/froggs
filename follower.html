@@ -2,47 +2,23 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8"/>
-    <title>Погоняй жабу</title>
-    <!-- base href="http://localhost:63342/timagribanov.github.io/"/ -->
-    <base href="https://timagribanov.github.io/"/>
+    <title>Погоняй жабу/Chase the frog</title>
+    <!-- base href="http://localhost:63342/froggs/"/ -->
+    <base href="https://timagribanov.github.io/froggs/"/>
 
-    <style>
-        #container {
-            width: 900px;
-            height: 900px;
-            border: black 2px solid;
-            margin: auto;
-        }
+    <link rel="stylesheet" href="froggs.css" type="text/css">
 
-        #pic {
-            position: relative;
-            width: 100px;
-            height: 76px;
-        }
-
-        footer {
-            text-align: center;
-        }
-    </style>
-
-    <script>
-        function follower() {
-            var position = document.getElementById('pic');
-
-            position.style.top = (Math.floor(Math.random() * 824) +1) + 'px';
-            position.style.left = (Math.floor(Math.random() * 800) +1) + 'px';
-        }
-    </script>
+    <script type="text/javascript" src="froggs.js"></script>
 </head>
 <body onload="follower()">
-    <div id="container">
-        <img id="pic" src="froggs/img/55.jpg" alt="Жаба скачет" onclick="follower()">
+    <div id="chase-container">
+        <img id="chase-pic" src="img/55.jpg" alt="Жаба скачет" onclick="follower()">
     </div>
 
     <footer>
-        <a href="froggs/gallery.html">Каталог жаб</a>
-        <a href="froggs/catcher.html">Поймай жабу</a>
-        <a href="froggs/froggs.html">Обратно к случайным жабам</a>
+        <a href="gallery.html">Каталог жаб/Frog catalogue</a><br/>
+        <a href="catcher.html">Поймай жабу/Catch the frog</a><br/>
+        <a href="froggs.html">Обратно к случайным жабам/Back to random frogs</a><br/>
     </footer>
 </body>
 </html>

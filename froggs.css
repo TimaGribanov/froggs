@@ -1,0 +1,169 @@
+/* BLOCK FOR GALLERY */
+#bigPicture {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    text-align: center;
+    overflow: auto;
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+#bigPicture p {
+    font-size: 20pt;
+    color: white;
+}
+
+#bigPicture img {
+    max-height: 500px;
+}
+
+#bigPicture span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    font-size: 60pt;
+    color: white;
+    cursor: pointer;
+}
+
+#bigPicture span:hover {
+    background-color: #aaa;
+}
+
+#counterContainer {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#gallery {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* BLOCK FOR CHASE */
+#chase-container {
+    width: 900px;
+    height: 900px;
+    border: black 2px solid;
+    margin: auto;
+}
+
+#chase-pic {
+    position: relative;
+    width: 100px;
+    height: 76px;
+}
+
+/* BLOCK FOR CATCH */
+#catcher-container {
+    width: 900px;
+    height: 900px;
+    border: black 2px solid;
+    margin: auto;
+}
+
+#catcher-pic {
+    position: relative;
+    width: 100px;
+    height: 76px;
+}
+
+#winSplash {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    text-align: center;
+    overflow: auto;
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: rgba(0,0,0,0.6);
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+#winSplash p {
+    font-size: 30pt;
+    color: white;
+}
+
+#winSplash img {
+    max-width: 500px;
+}
+
+#winSplash a {
+    color: white;
+    text-decoration-line: none;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* BLOCK FOR RANDOM FROG */
+#mainFrogg {
+    text-align: center;
+    height: 95vh;
+}
+
+#button {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#button:active {
+    width: 50px;
+    height: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#froggs-pic {
+    max-height: 60%;
+}
+
+#attention {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 50px;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+#attentionImg {
+    width: 625px;
+    height: 832px;
+    cursor: pointer;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* BASIC BLOCK */
+footer {
+    text-align: center;
+}
