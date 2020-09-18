@@ -121,7 +121,22 @@ const pictures = [
     'img/125.jpg',
     'img/126.jpg',
     'img/127.jpg',
-    'img/128.jpg'
+    'img/128.jpg',
+    'img/129.jpg',
+    'img/130.jpg',
+    'img/131.jpg',
+    'img/132.jpg',
+    'img/133.jpg',
+    'img/134.jpg',
+    'img/135.jpg',
+    'img/136.jpg',
+    'img/137.jpg',
+    'img/138.jpg',
+    'img/139.jpg',
+    'img/140.jpg',
+    'img/141.jpg',
+    'img/142.jpg',
+    'img/143.jpg'
 ];
 
 /* code for gallery */
